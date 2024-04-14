@@ -1,6 +1,21 @@
 /* this css file will only style the homepage of our site */
+body {
+  font-family: Helvetica;
+}
 
-.cat-photo {
+.homepage-photo {
   margin: 10px;
-  max-width: 500px;
+  padding: 10px;
+  border-radius: 20%;
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+}
+
+.minor-section {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #888888;
+  background-color: #96b584;
+  text-align: center;
 }
