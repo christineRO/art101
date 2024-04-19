@@ -17,3 +17,16 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
+
+nav#links li{
+  display: flex;
+  list-style-type: none;
+}
+
+nav#links ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
+}
