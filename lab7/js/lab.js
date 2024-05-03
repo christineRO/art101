@@ -52,20 +52,54 @@ var taskInputJoined = taskInputSorted.join("");
 // yeah I put it with the ambigram:
 var div = document.createElement("div");
     div.innerHTML = "Hola.";
-    div.style.color = "red";
+    div.style.color = "white";
     div.style.fontSize = "20px";
     div.style.fontFamily = "Helvetica";
     div.style.textAlign = "center";
-    div.style.border = "1px solid black";
-    div.style.padding = "10px";
-    div.style.margin = "15%";
-    div.style.backgroundColor = "lightblue";
+    div.style.border = "4px solid black";
+    div.style.padding = "5%";
+    div.style.margin = "5%";
+    div.style.backgroundColor = "green";
     div.style.borderRadius = "10px";
 
+console.log(taskInputSorted);
+
 // function for shuffling an 'ambigram':
+// OKAY I PRETTY MUCH RIPPED THIS FROM STACK OVERFLOW, but I can break it down:
+function taskShuffle(array){
+    let currentIndex = array.length;
+
+    // we make a while loop,
+    // which will run while the current index is NOT equal to 0
+    while (currentIndex != 0) {
+  
+      // it picks a random index from the array...
+      // Math.floor() rounds down to the nearest whole number
+      // Math.random() generates a random number between 0 and 1
+      // multiplying it by the current index gives us a random number between 0 and the current index...
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // and switches the current index with a random idex...
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+    
+    // now we return the array, which should be shuffled!
+    return array;
+}
+
+// variable for the shuffle!!
+var taskAmbigram = taskShuffle(taskInputSorted);
+var taskAmbigram = taskAmbigram.join("");
+var taskAmbigram = taskAmbigram.toLowerCase().split("");
+var taskAmbigram = taskAmbigram.join("");
+var taskAmbigram = taskAmbigram.charAt(0).toUpperCase() + taskAmbigram.slice(1);
+console.log(taskAmbigram);
+
 
 // append the output to the div:
-div.appendChild(labSevenFunction());
+div.innerHTML = "Congratulations! Your new name is: " + taskAmbigram + "<br>";
 
 // append that shit to the body:
 document.body.appendChild(div);
@@ -82,28 +116,3 @@ document.body.appendChild(div);
 document.writeln("You can have your name back, thanks for letting me borrow it: " + labSevenFunction() + "<br>");
 // bonus task output:
 document.writeln("This time, I didn't care about capitalization. Thanks for lending me your name: " + taskInputJoined + "<br>");
-
-
-
-
-// CLASS EXERCISE vvvv
-
-//function reverseStr(str){
-	//console.log("Original String:", str);
-    // convert string to array
-  //const array = str.split('');
-  //console.log("Split str:", array);
-  // reverse array
-  //const revArray = array.reverse();
-  //console.log("Rev array:", revArray);
-  // turn it back into a str
-  //const newStr = revArray.join('');
-  //console.log("Joined str:", newStr);
-  // return str
-//}
-
-// const myStr = "Two households, both alike in dignity, In fair Verona, where we lay our scene, From ancient grudge break to new mutiny, Where civil blood makes civil hands unclean.";
-
-// console.log(reverseStr(myStr));
-
-// THIS WAS DURING CLASS ^^^^
