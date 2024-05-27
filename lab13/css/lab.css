@@ -1,0 +1,12 @@
+#output {
+    column-width: 100px;
+}
+
+#output p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p.text {
+    font-weight: bold;
+}
