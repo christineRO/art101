@@ -3,15 +3,6 @@ body {
   font-family: Helvetica;
 }
 
-.homepage-photo {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 20%;
-  width: 20%;
-  height: 20%;
-  object-fit: cover;
-}
-
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
@@ -29,4 +20,63 @@ nav#links ul{
   flex-wrap: wrap;
   padding: 5px;
   justify-content: space-around;
+}
+/*
+
+my edits
+
+*/
+
+.dropdown-lab {
+  position: relative;
+  display: inline-block;
+}
+
+#dropdown-lab-button {
+  background-color:#EAF0CE;
+  color:#443850;
+  padding: 10%;
+  font-size: 20px;
+  border: none;
+}
+
+#dropdown-lab-content {
+  display: none;
+  position: absolute;
+  background-color: #EAF0CE;
+  padding: 10%;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 60px;
+}
+
+/*
+I'm gonna be FR and say I ripped some/most of this stuff off of w3 schools, but I do understand the concept.
+Below are all my hovers:
+*/
+
+/* Change color of dropdown links on hover */
+#dropdown-lab-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown-lab:hover #dropdown-lab-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown-lab:hover #dropdown-lab-button {background-color: #3e8e41;}
+
+/* Change the background color of the abtMe button */
+#dropdown-abtMe-button:hover {background-color: #3e8e41;}
+
+/*
+End of hovers.
+*/
+
+#dropdown-abtMe-button {
+  background-color:#EAF0CE;
+  color:#443850;
+  padding: 10%;
+  font-size: 20px;
+  border: none;
 }

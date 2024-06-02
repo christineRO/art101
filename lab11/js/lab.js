@@ -23,22 +23,3 @@ $("#submit").click(function(){
 
     $("#output").html('<div class=text"><p>' + userNameSorted + '</p></div>');
 });
-
-
-
-// Task X: Bonus
-
-/*
-// implementing anagram function from lab 7...
-function anagram(inputString){
-    return inputString.sortString(inputString).join('').toLowerCase().split('').join('').charAt(0).toUpperCase().slice(1);
-}
-
-$("#task-X-button").click(function(){
-    const taskXinput = $("#task-X-input").val();
-    var taskX = anagram(taskXinput);
-
-//im having coughing fits im gonna stop here... and fix it at some point
-    $("#taskXoutput").append('<div class=text"><p>' + taskX + '</p></div>')
-});
-*/

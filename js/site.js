@@ -1,6 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// site.js - js for the entire site
+// Author: Christine Role
+// Date: 06.01.24
 
 // Constants
 

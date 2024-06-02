@@ -14,27 +14,30 @@
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/homepage.css">
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
+	<script type="text/javascript" src="./js/site.js" DEFER></script>
 
-	<!-- <script type="text/javascript" src="./js/lab.js" DEFER></script> -->
+
+	<!--with the help of WesBot...-->
+    <style>
+        .typewriter {
+            overflow: hidden; /* Ensures the content is not visible until animated */
+        }
+    </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+	<!--end help of Wesbot.-->
+
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
-		<section>
-			<h1>Christine's Homepage</h1>
-			<div class="minor-section">
-					<!-- Note that all filenames use lowercase and no spaces -->
-					<img class="homepage-photo" src="./img/christine_at_starbucks.png">
-					<h2>About Me</h2>
-					<p>My name is Christine, a 3rd year AGPM major. I love to draw and play video games!</p>
-			</div>
 
-		</section>
-
+		<!--Start of NAV tab-->
 		<nav id="links">
+
+			<!--LABs dropdown menu-->
 			<div class="dropdown-lab">
-				<button class="dropdown-button">Labs</button>
-					<div class="dropdown-lab-content">
+				<button id="dropdown-lab-button">Labs</button>
+					<div id="dropdown-lab-content">
 						<!-- Put links to labs here. -->
 						<a href="./lab1/index.html">Lab 1</a>
 						<a href="./lab2/lab2.html">Lab 2</a>
@@ -49,9 +52,45 @@
 						<a href="./lab11/index.html">Lab 11</a>
 						<a href="./lab12/index.html">Lab 12</a>
 						<a href="./lab13/index.html">Lab 13</a>
+						<a href="./lab14/index.html">Lab 14</a>
+						<a href="./lab15/index.html">Lab 15</a>
+						<a href="./lab16/index.html">Lab 16</a>
 					</div>
 			</div>
+
+			<!--ABOUT ME dropdown menu-->
+			<div class="dropdown-lab">
+				<button id="dropdown-abtMe-button"><a href="./aboutMe.html">About Me</a></button>
+			</div>
+
+		<!--End of NAV tab-->
 		</nav>
+
+		<section>
+			<div class="minor-section">
+				<!--With the support of WesBot...-->
+				<p class="typewriter"></p>
+
+				<script type="text/javascript">
+				$(document).ready(function(){
+					var i = 0;
+					var txt = "hello. welcome to Christine's ART101 webpage ✦"; /* The text to be typed out */
+
+					function typeWriter() {
+						if (i < txt.length) {
+							$(".typewriter").append(txt.charAt(i));
+							i++;
+							setTimeout(typeWriter, 100); // Set this value to change speed of typewriting.
+						}
+					}
+
+						typeWriter();
+					});
+				</script>
+				<!--end WesBot-->
+			</div>
+		</section>
+
 	</main>
 </body>
 </html>
