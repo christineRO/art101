@@ -1,6 +1,7 @@
 /* this css file will only style the homepage of our site */
 body {
   font-family: Helvetica;
+  margin-top: 5%;
 }
 
 .minor-section {
@@ -26,6 +27,10 @@ nav#links ul{
 my edits
 
 */
+.navBar {
+  display: flex;
+  justify-content: space-around;
+}
 
 .dropdown-lab {
   position: relative;
