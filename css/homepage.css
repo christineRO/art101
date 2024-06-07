@@ -27,6 +27,13 @@ nav#links ul{
 my edits
 
 */
+
+p {
+  font-family: Helvetica;
+  font-size: 150%;
+  margin-bottom: 20px;
+}
+
 .navBar {
   display: flex;
   justify-content: space-around;
