@@ -26,7 +26,7 @@ $("#activate").click(function(){
         success: function(data) {
             // do stuff
             console.log(data);
-            return $("#output").append(data.name);
+            return $("#output").html(data.name);
         },
         // What we do if the api call fails
         error: function (jqXHR, textStatus, errorThrown) { 
